@@ -1,3 +1,36 @@
+
+const body = document.querySelector("body"),
+  sidebar = body.querySelector("nav"),
+  toggle = body.querySelector(".toggle"),
+  searchBtn = body.querySelector(".search-box"),
+  modeSwitch = body.querySelector(".toggle-switch"),
+  modeText = body.querySelector(".mode-text");
+
+toggle.addEventListener("click", () => {
+  sidebar.classList.toggle("close");
+});
+
+searchBtn.addEventListener("click", () => {
+  sidebar.classList.remove("close");
+});
+
+modeSwitch.addEventListener("click", () => {
+  body.classList.toggle("dark");
+
+  if (body.classList.contains("dark")) {
+    modeText.innerText = "Light mode";
+  } else {
+    modeText.innerText = "Dark mode";
+  }
+});
+
+
+
+
+
+
+
+
 document.addEventListener('DOMContentLoaded', function() {
   const player = document.querySelector('.player');
   const cover = document.querySelector('.cover');
@@ -15,51 +48,178 @@ document.addEventListener('DOMContentLoaded', function() {
     {
       title: 'Kangal-Irandal',
       artist: 'Belly Raj, Deepa Mariam, and Deepa Miriam',
-      src: './Kangal-Irandal.mp3',
+      src: './songs/Kangal-Irandal.mp3',
       cover: 'images/kan.jpg'
     },
     {
       title: 'Kadhal-Rojave',
       artist: 'A. R. Rahman',
-      src: './Kadhal-Rojave.mp3',
+      src: './songs/Kadhal-Rojave.mp3',
       cover: 'images/kadhal-rojave.jpeg'
     },
     {
       title: 'Thangame',
       artist: 'Anirudh Ravichander',
-      src: './Thangame.mp3',
+      src: './songs/Thangame.mp3',
       cover: 'images/thangame.jpg'
     },
     {
       title: 'Yennai-Maatrum-Kadhale',
       artist: 'Anirudh',
-      src: './Yennai-Maatrum-Kadhale.mp3',
+      src: './songs/Yennai-Maatrum-Kadhale.mp3',
       cover: 'images/Yennai-Maatrum-Kadhale.jpeg'
     },
     {
       title: 'Mel-Isaiyae',
       artist: 'Swarnalatha and Unni Menon',
-      src: './Mel-Isaiyae.mp3',
+      src: './songs/Mel-Isaiyae.mp3',
       cover: 'images/Mel-Isaiyae.jpeg'
     },
     {
       title: 'Kanave-Kanave',
       artist: 'Anirudh Ravichander',
-      src: './Kanave-Kanave-MassTamilan.com.mp3',
+      src: './songs/Kanave-Kanave-MassTamilan.com.mp3',
       cover: 'images/Kanave-Kanave.jpeg'
     },
     {
       title: 'Beat-of-Master',
       artist: 'Anirudh Ravichander',
-      src: './Beat-of-Master-(Instrumental)-MassTamilan.io.mp3',
+      src: './songs/Beat-of-Master-(Instrumental)-MassTamilan.io.mp3',
       cover: 'images/Beat-of-Master.jpeg'
     },
     {
       title: 'Andha-Kanna-Paathaakaa',
       artist: 'Anirudh Ravichander',
-      src: './Andha-Kanna-Paathaakaa-MassTamilan.io.mp3',
+      src: './songs/Andha-Kanna-Paathaakaa-MassTamilan.io.mp3',
       cover: 'images/Andha-Kanna-Paathaakaa.jpg'
     },
+    {
+      title: 'Aval',
+      artist: 'Kavi Pradeep, Priya Himesh, and Santhosh Narayanan      ',
+      src: './songs/Aval.mp3',
+      cover: 'images/Aval.jpeg'
+    },
+    {
+      title: 'Arjunar-Villu',
+      artist: ' Manikka Vinayagam and Sukhwinder Singh      ',
+      src: './songs/Arjunar-Villu.mp3',
+      cover: 'images/Arjunar-Villu.jpeg'
+    },
+    {
+      title: 'Bad-Boys-In-The-Block-Tonite',
+      artist: 'Hiphop Tamizha',
+      src: './songs/Bad-Boys-In-The-Block-Tonite-MassTamilan.io.mp3',
+      cover: 'images/Bad-Boys.jpeg'
+    },
+    {
+      title: 'En-Kadhal-Solla',
+      artist: 'Tanvi Shah and Yuvan Shankar Raja',
+      src: './songs/En-Kadhal-Solla.mp3',
+      cover: 'images/En-Kadhal-Solla.jpeg'
+    },
+    {
+      title: 'Ennai-Vittu',
+      artist: 'Sid Sriram and Yuvan Shankar Raja      ',
+      src: './songs/Ennai-Vittu-MassTamilan.dev.mp3',
+      cover: 'images/Ennai-Vittu.jpeg'
+    },
+    {
+      title: 'Maattikkichey-Maattikkichey',
+      artist: 'Hiphop Tamizha',
+      src: './songs/Maattikkichey-Maattikkichey-MassTamilan.com.mp3',
+      cover: 'images/Maattikkichey-Maattikkichey.jpg'
+    },
+    {
+      title: 'Megham-Karukatha',
+      artist: 'Anirudh Ravichander and Dhanush      ',
+      src: './songs/Megham-Karukatha-MassTamilan.dev.mp3',
+      cover: 'images/Megham-Karukatha.jpeg'
+    },
+    {
+      title: 'Naan-Un',
+      artist: 'Arijit Singh and Chinmayi      ',
+      src: './songs/Naan-Un.mp3',
+      cover: 'images/Naan-Un.jpeg'
+    },
+    {
+      title: 'Neeyum-Naanum-Anbe',
+      artist: 'Hiphop Tamizha',
+      src: './songs/Neeyum-Naanum-Anbe-MassTamilan.com.mp3',
+      cover: 'images/Neeyum-Naanum-Anbe.jpeg'
+    },
+    {
+      title: 'Not-Ramaiya-Vastavaiya',
+      artist: 'Anirudh Ravichander, Shilpa Rao, and Vishal Dadlani',
+      src: './songs/Not-Ramaiya-Vastavaiya-MassTamilan.dev.mp3',
+      cover: 'images/Not-Ramaiya-Vastavaiya.jpeg'
+    },
+    {
+      title: 'Otha-Sollaala',
+      artist: 'G. V. Prakash Kumar and Velmurugan',
+      src: './songs/Otha-Sollaala.mp3',
+      cover: 'images/Otha-Sollaala.jpeg'
+    },
+    {
+      title: 'Oxygen',
+      artist: 'Hiphop Tamizha',
+      src: './songs/Oxygen.mp3',
+      cover: 'images/Oxygen.jpeg'
+    },
+    {
+      title: 'Saarattu-Vandiyila',
+      artist: 'A. R. Rahman',
+      src: './songs/Saarattu-Vandiyila.mp3',
+      cover: 'images/Saarattu-Vandiyila.jpeg'
+    },
+    {
+      title: 'Thaiyya-Thaiyya',
+      artist: 'Malgudi Subha, Palakkad Sreeram, and Sukhwinder Singh      ',
+      src: './songs/Thaiyya-Thaiyya.mp3',
+      cover: 'images/Thaiyya-Thaiyya.jpeg'
+    },
+    {
+      title: 'Thuli-Thuli-Mazhaiyaai',
+      artist: 'Haricharan, Tanvi Shah, and Yuvan Shankar Raja      ',
+      src: './songs/Thuli-Thuli-Mazhaiyaai.mp3',
+      cover: 'images/Thuli-Thuli-Mazhaiyaai.jpeg'
+    },
+    {
+      title: 'Urvashi-Urvashi',
+      artist: 'A. R. Rahman, Shahul Hameed, and Suresh Peters      ',
+      src: './songs/Urvashi-Urvashi-MassTamilan.dev.mp3',
+      cover: 'images/Urvashi-Urvashi.jpg'
+    },
+    {
+      title: 'Varava-Varava',
+      artist: 'Anirudh Ravichander      ',
+      src: './songs/Varava-Varava.mp3',
+      cover: 'images/Varava-Varava.jpeg'
+    },
+    {
+      title: 'Venmegam-Pennaga',
+      artist: ' Hariharan      ',
+      src: './songs/Venmegam-Pennaga.mp3',
+      cover: 'images/Venmegam-Pennaga.jpeg'
+    },
+    // {
+    //   title: '',
+    //   artist: '',
+    //   src: '.',
+    //   cover: 'images'
+    // },
+    // {
+    //   title: '',
+    //   artist: '',
+    //   src: '.',
+    //   cover: 'images'
+    // },
+    // {
+    //   title: '',
+    //   artist: '',
+    //   src: '.',
+    //   cover: 'images'
+    // },
+    
   ];
 
   let currentSongIndex = 0;
