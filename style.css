@@ -458,6 +458,15 @@ body {
   background-color:white;
   color: black;
 }
+footer {
+  background-color: #000;
+  color: #fff; 
+  text-align: center;
+  padding: 20px 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
 
 @media (max-width: 400px) {
   .player {
